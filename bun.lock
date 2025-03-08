@@ -3,6 +3,9 @@
   "workspaces": {
     "": {
       "name": "kata-drawer-svelte",
+      "dependencies": {
+        "clsx": "^2.1.1",
+      },
       "devDependencies": {
         "@eslint/compat": "^1.2.5",
         "@eslint/js": "^9.18.0",
