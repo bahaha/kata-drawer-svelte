@@ -1,0 +1,217 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Vaul Drawer: Basic > render closed drawer correctly 1`] = `
+<div>
+  <div
+    data-testid="basic-drawer--wrapper"
+  >
+    <section
+      data-testid="basic-drawer--root"
+    >
+      <!---->
+      <button
+        aria-expanded="false"
+        aria-label="Open Drawer"
+        data-testid="basic-drawer--trigger"
+        type="button"
+      >
+        Open Drawer
+        <!---->
+      </button>
+      <!---->
+       
+      <!---->
+      
+      <!---->
+       
+      <!---->
+      
+      <!---->
+      <!---->
+    </section>
+    <!---->
+  </div>
+  
+</div>
+`;
+
+exports[`Vaul Drawer: Basic > render open drawer correctly with open props = true 1`] = `
+<div>
+  <div
+    data-testid="basic-drawer--wrapper"
+  >
+    <section
+      data-testid="basic-drawer--root"
+    >
+      <!---->
+      <button
+        aria-expanded="true"
+        aria-label="Open Drawer"
+        data-testid="basic-drawer--trigger"
+        type="button"
+      >
+        Open Drawer
+        <!---->
+      </button>
+      <!---->
+       
+      <!---->
+      <div
+        aria-hidden="true"
+        class="drawer__overlay svelte-psdi7q"
+        data-state="open"
+        data-testid="basic-drawer--overlay"
+      />
+      
+      <!---->
+       
+      <!---->
+      <div
+        class="drawer__content svelte-19rbiwd"
+        data-testid="basic-drawer--content"
+        data-vaul-drawer=""
+        data-vaul-drawer-direction="bottom"
+        role="dialog"
+        tabindex="-1"
+      >
+        <h2
+          data-testid="basic-drawer--content-title"
+        >
+          Drawer Content
+        </h2>
+         
+        <p>
+          This is inside the drawer
+        </p>
+        <!---->
+      </div>
+      
+      <!---->
+      <!---->
+    </section>
+    <!---->
+  </div>
+  
+</div>
+`;
+
+exports[`Vaul Drawer: Basic > render with custom styles 1`] = `
+<div>
+  <div
+    data-testid="basic-drawer--wrapper"
+  >
+    <section
+      data-testid="basic-drawer--root"
+      style="--vaul-drawer--content-bg: #f1ebdd; --vaul-drawer--content-rounded: 2rem;"
+    >
+      <!---->
+      <button
+        aria-expanded="true"
+        aria-label="Open Drawer"
+        data-testid="basic-drawer--trigger"
+        type="button"
+      >
+        Open Drawer
+        <!---->
+      </button>
+      <!---->
+       
+      <!---->
+      <div
+        aria-hidden="true"
+        class="drawer__overlay svelte-psdi7q"
+        data-state="open"
+        data-testid="basic-drawer--overlay"
+      />
+      
+      <!---->
+       
+      <!---->
+      <div
+        class="drawer__content svelte-19rbiwd"
+        data-testid="basic-drawer--content"
+        data-vaul-drawer=""
+        data-vaul-drawer-direction="bottom"
+        role="dialog"
+        tabindex="-1"
+      >
+        <h2
+          data-testid="basic-drawer--content-title"
+        >
+          Drawer Content
+        </h2>
+         
+        <p>
+          This is inside the drawer
+        </p>
+        <!---->
+      </div>
+      
+      <!---->
+      <!---->
+    </section>
+    <!---->
+  </div>
+  
+</div>
+`;
+
+exports[`Vaul Drawer: Basic > render with different direction 1`] = `
+<div>
+  <div
+    data-testid="basic-drawer--wrapper"
+  >
+    <section
+      data-testid="basic-drawer--root"
+    >
+      <!---->
+      <button
+        aria-expanded="true"
+        aria-label="Open Drawer"
+        data-testid="basic-drawer--trigger"
+        type="button"
+      >
+        Open Drawer
+        <!---->
+      </button>
+      <!---->
+       
+      <!---->
+      <div
+        aria-hidden="true"
+        class="drawer__overlay svelte-psdi7q"
+        data-state="open"
+        data-testid="basic-drawer--overlay"
+      />
+      
+      <!---->
+       
+      <!---->
+      <div
+        class="drawer__content svelte-19rbiwd"
+        data-testid="basic-drawer--content"
+        data-vaul-drawer=""
+        data-vaul-drawer-direction="top"
+        role="dialog"
+        tabindex="-1"
+      >
+        <h2
+          data-testid="basic-drawer--content-title"
+        >
+          Drawer Content
+        </h2>
+         
+        <p>
+          This is inside the drawer
+        </p>
+        <!---->
+      </div>
+      
+      <!---->
+      <!---->
+    </section>
+    <!---->
+  </div>
+  
+</div>
+`;
