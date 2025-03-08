@@ -1,1 +1,1 @@
-export type DrawerDirection = 'top' | 'right' | 'bottom' | 'right';
+export type DrawerDirection = 'top' | 'left' | 'bottom' | 'right';
