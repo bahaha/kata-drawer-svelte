@@ -1,20 +1,19 @@
 <script lang="ts">
+	import cn from 'clsx';
 	import { getVaulCtx } from '$lib/vaul/ctx.js';
+	import type { SvelteHTMLElements } from 'svelte/elements';
 
+	const { class: className, ...props }: SvelteHTMLElements['div'] = $props();
 	const drawer = getVaulCtx();
-
-	function handleBackdropClick() {
-		drawer.methods.close();
-	}
 </script>
 
-{drawer.states.open}
 {#if drawer.states.open}
 	<div
-		class="drawer__overlay"
+		{...props}
+		class={cn('drawer__overlay', className)}
 		aria-hidden="true"
 		data-state={drawer.states.open ? 'open' : 'closed'}
-		onclick={handleBackdropClick}
+		onclick={() => drawer.methods.close()}
 	></div>
 {/if}
 
@@ -22,7 +21,7 @@
 	.drawer__overlay {
 		position: fixed;
 		inset: 0;
-		background-color: var(--vaul--overlay-bg, rgba(0, 0, 0, 0.5));
+		background-color: var(--vaul-drawer--overlay-bg, rgba(0, 0, 0, 0.5));
 		z-index: 50;
 	}
 </style>

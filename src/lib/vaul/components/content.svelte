@@ -1,13 +1,16 @@
 <script lang="ts">
+	import cn from 'clsx';
+	import type { SvelteHTMLElements } from 'svelte/elements';
 	import { getVaulCtx } from '$lib/vaul/ctx.js';
 
-	const { children } = $props();
+	const { class: className, children, ...props }: SvelteHTMLElements['div'] = $props();
 	const drawer = getVaulCtx();
 </script>
 
 {#if drawer.states.open}
 	<div
-		class="drawer__content"
+		{...props}
+		class={cn('drawer__content', className)}
 		role="dialog"
 		tabindex="-1"
 		data-vaul-drawer-direction={drawer.states.direction}

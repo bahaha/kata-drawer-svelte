@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { HTMLButtonAttributes, SvelteHTMLElements } from 'svelte/elements';
+	import type { SvelteHTMLElements } from 'svelte/elements';
 
 	import { getVaulCtx } from '$lib/vaul/ctx.js';
 
