@@ -19,19 +19,19 @@
 
 <style>
 	.drawer__content {
-		--drawer--content-radius: var(--drawer--content-rounded, 1rem);
+		--vaul-drawer--content-radius: var(--vaul-drawer--content-rounded, 1rem);
 		position: fixed;
 		z-index: 51;
 		display: flex;
-		padding: var(--drawer--content-padding, 1.5rem);
-		background-color: var(--drawer--content-bg, #efefef);
+		padding: var(--vaul-drawer--content-padding, 1.5rem);
+		background-color: var(--vaul-drawer--content-bg, #efefef);
 	}
 
 	.drawer__content[data-vaul-drawer-direction='bottom'] {
 		flex-direction: column;
-		border-top-left-radius: var(--drawer--content-radius);
-		border-top-right-radius: var(--drawer--content-radius);
-		height: var(--drawer--content-height, 50%);
+		border-top-left-radius: var(--vaul-drawer--content-radius);
+		border-top-right-radius: var(--vaul-drawer--content-radius);
+		height: var(--vaul-drawer--content-height, 50%);
 		bottom: 0;
 		left: 0;
 		right: 0;

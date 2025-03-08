@@ -1,58 +1,115 @@
-# create-svelte
+# Vaul for Svelte
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+A drawer component for Svelte inspired by the [Vaul](https://github.com/emilkowalski/vaul) drawer component for React. This drawer component allows you to create draggable drawer interfaces with smooth animations and gestures.
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+## Features
 
-## Creating a project
+- 🚀 Simple API for creating drawer interfaces
+- 🎨 Fully customizable with CSS variables
+- 🧩 Modular component structure
+- 📱 Mobile-friendly with touch gestures (coming soon)
+- 📏 Support for snap points (coming soon)
+- 🔄 Multiple opening directions
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Installation
 
-```bash
-# create a new project in the current directory
-npx sv create
+### Basic Usage
 
-# create a new project in my-app
-npx sv create my-app
+```svelte
+<script>
+	import { Root, Trigger, Overlay, Content } from 'vaul-svelte';
+</script>
+
+<Root>
+	<Trigger>Open Drawer</Trigger>
+	<Overlay />
+	<Content>
+		<h2>Drawer Content</h2>
+		<p>This is the drawer content.</p>
+	</Content>
+</Root>
 ```
 
-## Developing
+### Components
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+#### Root
 
-```bash
-npm run dev
+The main container component that sets up the drawer context.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```svelte
+<Root open={boolean} direction="bottom">
+	<!-- Child components go here -->
+</Root>
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+#### Props
 
-## Building
+- `open`: Boolean to control the drawer state (optional)
+- `direction`: Direction the drawer opens from (default: 'bottom')
 
-To build your library:
+### Trigger
 
-```bash
-npm run package
+A button that opens the drawer when clicked.
+
+```svelte
+<Trigger>Open Drawer</Trigger>
 ```
 
-To create a production version of your showcase app:
+### Content
 
-```bash
-npm run build
+The actual drawer content container.
+
+```svelte
+<Content>
+	<!-- Your content goes here -->
+</Content>
 ```
 
-You can preview the production build with `npm run preview`.
+### Overlay
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+The background overlay that appears when the drawer is open.
 
-## Publishing
+```svelte
+<Overlay />
+```
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+## Customization
 
-To publish your library to [npm](https://www.npmjs.com):
+The drawer component can be customized using CSS variables:
 
-```bash
-npm publish
+```svelte
+<Root style="--drawer--content-bg: #f1ebdd;">
+	<!-- Components -->
+</Root>
+```
+
+### Available CSS Variables
+
+| Variable                         | Description                            | Default              |
+| -------------------------------- | -------------------------------------- | -------------------- |
+| `--vaul-drawer--content-bg`      | Drawer background color                | `#efefef`            |
+| `--vaul-drawer--content-padding` | Drawer content padding                 | `1.5rem`             |
+| `--vaul-drawer--content-rounded` | Drawer corner radius                   | `1rem`               |
+| `--vaul-drawer--content-height`  | Drawer height (for bottom/top drawers) | `50%`                |
+| `--vaul-drawer--overlay-bg`      | Overlay background color               | `rgba(0, 0, 0, 0.5)` |
+
+### Drawer Directions
+
+The drawer can open from different directions:
+
+```svelte
+<!-- Bottom drawer (default) -->
+<Root direction="bottom">...</Root>
+
+<!-- Top drawer -->
+
+<Root direction="top">...</Root>
+
+<!-- Left drawer (coming soon) -->
+
+<Root direction="left">...</Root>
+
+<!-- Right drawer (coming soon) -->
+
+<Root direction="right">...</Root>
 ```
