@@ -1,18 +1,25 @@
 <script lang="ts">
-	import type { HTMLButtonAttributes } from 'svelte/elements';
+	import type { HTMLButtonAttributes, SvelteHTMLElements } from 'svelte/elements';
 
 	import { getVaulCtx } from '$lib/vaul/ctx.js';
 
-	const { children, onclick, ...props }: HTMLButtonAttributes = $props();
+	const {
+		children,
+		'aria-label': label = 'Open Drawer',
+		...props
+	}: SvelteHTMLElements['button'] = $props();
 
 	const drawer = getVaulCtx();
 </script>
 
 <button
 	type="button"
-	aria-label="Open Drawer"
+	aria-label={label}
 	aria-expanded={drawer.states.open}
-	onclick={() => drawer.methods.open()}
+	onclick={(e) => {
+		drawer.methods.open();
+		props.onclick?.(e);
+	}}
 	{...props}
 >
 	{@render children?.()}
