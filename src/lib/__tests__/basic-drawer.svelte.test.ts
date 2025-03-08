@@ -31,11 +31,16 @@ describe('Vaul Drawer: Basic', () => {
         const { container } = render(BasicDrawerFixture, {
             props: {
                 root: {
-                    style: '--drawer--content-bg: #f1ebdd; --drawer--content-rounded: 2rem;',
+                    style: '--vaul-drawer--content-bg: #f1ebdd; --vaul-drawer--content-rounded: 2rem;',
                     open: true
                 }
             }
         });
+
+        const styles = getComputedStyle(screen.getByTestId('basic-drawer--root'));
+        expect(styles.getPropertyValue('--vaul-drawer--content-bg')).toBe('#f1ebdd');
+        expect(styles.getPropertyValue('--vaul-drawer--content-rounded')).toBe('2rem');
+
         expect(container).toMatchSnapshot();
     });
 

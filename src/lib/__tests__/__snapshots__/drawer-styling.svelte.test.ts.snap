@@ -2,10 +2,11 @@
 
 exports[`Drawer Styling > apply CSS correctly 1`] = `
 <div>
-  <data
+  <div
     data-testid="basic-drawer--wrapper"
   >
     <section
+      data-testid="basic-drawer--root"
       style="--vaul-drawer--overlay-bg: rgba(0, 0, 0, 0.8); --vaul-drawer--content-padding: 1rem; --vaul-drawer--content-rounded: 1.25rem; --vaul-drawer--content-height: 70%; --vaul-drawer--content-bg: #055660;"
     >
       <!---->
@@ -46,7 +47,7 @@ exports[`Drawer Styling > apply CSS correctly 1`] = `
         </h2>
          
         <p>
-          This is insdie the drawer
+          This is inside the drawer
         </p>
         <!---->
       </div>
@@ -55,7 +56,7 @@ exports[`Drawer Styling > apply CSS correctly 1`] = `
       <!---->
     </section>
     <!---->
-  </data>
+  </div>
   
 </div>
 `;

@@ -2,10 +2,12 @@
 
 exports[`Vaul Drawer: Basic > render closed drawer correctly 1`] = `
 <div>
-  <data
+  <div
     data-testid="basic-drawer--wrapper"
   >
-    <section>
+    <section
+      data-testid="basic-drawer--root"
+    >
       <!---->
       <button
         aria-expanded="false"
@@ -28,76 +30,18 @@ exports[`Vaul Drawer: Basic > render closed drawer correctly 1`] = `
       <!---->
     </section>
     <!---->
-  </data>
+  </div>
   
 </div>
 `;
 
 exports[`Vaul Drawer: Basic > render open drawer correctly with open props = true 1`] = `
 <div>
-  <data
-    data-testid="basic-drawer--wrapper"
-  >
-    <section>
-      <!---->
-      <button
-        aria-expanded="true"
-        aria-label="Open Drawer"
-        data-testid="basic-drawer--trigger"
-        type="button"
-      >
-        Open Drawer
-        <!---->
-      </button>
-      <!---->
-       
-      <!---->
-      <div
-        aria-hidden="true"
-        class="drawer__overlay svelte-psdi7q"
-        data-state="open"
-        data-testid="basic-drawer--overlay"
-      />
-      
-      <!---->
-       
-      <!---->
-      <div
-        class="drawer__content svelte-19rbiwd"
-        data-testid="basic-drawer--content"
-        data-vaul-drawer=""
-        data-vaul-drawer-direction="bottom"
-        role="dialog"
-        tabindex="-1"
-      >
-        <h2
-          data-testid="basic-drawer--content-title"
-        >
-          Drawer Content
-        </h2>
-         
-        <p>
-          This is insdie the drawer
-        </p>
-        <!---->
-      </div>
-      
-      <!---->
-      <!---->
-    </section>
-    <!---->
-  </data>
-  
-</div>
-`;
-
-exports[`Vaul Drawer: Basic > render with custom styles 1`] = `
-<div>
-  <data
+  <div
     data-testid="basic-drawer--wrapper"
   >
     <section
-      style="--drawer--content-bg: #f1ebdd; --drawer--content-rounded: 2rem;"
+      data-testid="basic-drawer--root"
     >
       <!---->
       <button
@@ -137,7 +81,7 @@ exports[`Vaul Drawer: Basic > render with custom styles 1`] = `
         </h2>
          
         <p>
-          This is insdie the drawer
+          This is inside the drawer
         </p>
         <!---->
       </div>
@@ -146,17 +90,80 @@ exports[`Vaul Drawer: Basic > render with custom styles 1`] = `
       <!---->
     </section>
     <!---->
-  </data>
+  </div>
+  
+</div>
+`;
+
+exports[`Vaul Drawer: Basic > render with custom styles 1`] = `
+<div>
+  <div
+    data-testid="basic-drawer--wrapper"
+  >
+    <section
+      data-testid="basic-drawer--root"
+      style="--vaul-drawer--content-bg: #f1ebdd; --vaul-drawer--content-rounded: 2rem;"
+    >
+      <!---->
+      <button
+        aria-expanded="true"
+        aria-label="Open Drawer"
+        data-testid="basic-drawer--trigger"
+        type="button"
+      >
+        Open Drawer
+        <!---->
+      </button>
+      <!---->
+       
+      <!---->
+      <div
+        aria-hidden="true"
+        class="drawer__overlay svelte-psdi7q"
+        data-state="open"
+        data-testid="basic-drawer--overlay"
+      />
+      
+      <!---->
+       
+      <!---->
+      <div
+        class="drawer__content svelte-19rbiwd"
+        data-testid="basic-drawer--content"
+        data-vaul-drawer=""
+        data-vaul-drawer-direction="bottom"
+        role="dialog"
+        tabindex="-1"
+      >
+        <h2
+          data-testid="basic-drawer--content-title"
+        >
+          Drawer Content
+        </h2>
+         
+        <p>
+          This is inside the drawer
+        </p>
+        <!---->
+      </div>
+      
+      <!---->
+      <!---->
+    </section>
+    <!---->
+  </div>
   
 </div>
 `;
 
 exports[`Vaul Drawer: Basic > render with different direction 1`] = `
 <div>
-  <data
+  <div
     data-testid="basic-drawer--wrapper"
   >
-    <section>
+    <section
+      data-testid="basic-drawer--root"
+    >
       <!---->
       <button
         aria-expanded="true"
@@ -195,7 +202,7 @@ exports[`Vaul Drawer: Basic > render with different direction 1`] = `
         </h2>
          
         <p>
-          This is insdie the drawer
+          This is inside the drawer
         </p>
         <!---->
       </div>
@@ -204,7 +211,7 @@ exports[`Vaul Drawer: Basic > render with different direction 1`] = `
       <!---->
     </section>
     <!---->
-  </data>
+  </div>
   
 </div>
 `;

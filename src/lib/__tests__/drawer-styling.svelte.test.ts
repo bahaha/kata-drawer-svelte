@@ -9,11 +9,11 @@ describe('Drawer Styling', () => {
             props: {
                 root: {
                     style: `
-                    --vaul-drawer--overlay-bg: rgba(0, 0, 0, 0.8);
-                    --vaul-drawer--content-padding: 1rem;
-                    --vaul-drawer--content-rounded: 1.25rem;
-                    --vaul-drawer--content-height: 70%;
-                    --vaul-drawer--content-bg: #055660;
+                --vaul-drawer--overlay-bg: rgba(0, 0, 0, 0.8);
+                --vaul-drawer--content-padding: 1rem;
+                --vaul-drawer--content-rounded: 1.25rem;
+                --vaul-drawer--content-height: 70%;
+                --vaul-drawer--content-bg: #055660;
                 `
                 }
             }
